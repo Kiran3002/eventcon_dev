@@ -4,4 +4,4 @@ FROM nginx:latest
 COPY . /usr/share/nginx/html
 
 # Expose port 80 to allow outside access
-EXPOSE 86
+EXPOSE 88
