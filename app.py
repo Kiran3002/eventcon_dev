@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import psycopg2
 
-app = Flask(__name__, static_url_path='/static')
+app = Flask(__name__)
 
 # Database connection settings
 DB_HOST = 'localhost'
