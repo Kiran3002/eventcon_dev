@@ -40,11 +40,12 @@ def submit_contact():
             cur.close()
             conn.close()
 
-            return "Contact details submitted successfully!"
+            return "Query submitted successfully!"
         except Exception as e:
             return "Error: " + str(e)
 
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
+
+if __name__ == '_main_':
     app.run(debug=True)
