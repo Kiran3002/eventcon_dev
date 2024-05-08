@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('event_login.jpg'); /* Add your background image path here */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.login h1 {
+    text-align: center;
+    color: #000; /* Black text color */
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.login label {
+    margin-bottom: 5px;
+    color: #000; /* Black label color */
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000; /* Black border */
+    border-radius: 5px;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    outline: none;
+    border-color: #555; /* Dark gray border color on focus */
+}
+
+.login button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000; /* Black button background color */
+    color: #fff; /* White button text color */
+    cursor: pointer;
+}
+
+.login button[type="submit"]:hover {
+    background-color: #737373; /* Darker background color on hover */
+}
+
+.login p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login p a {
+    color: #000; /* Black link color */
+}
+
+.login p a:hover {
+    text-decoration: underline;
+}
