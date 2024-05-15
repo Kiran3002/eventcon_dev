@@ -78,7 +78,7 @@ def login():
                 conn.close()
                 if result and check_password_hash(result[0], password):
                     # If login is successful, redirect to index page
-                    return redirect(url_for('index'))
+                    return redirect(url_for('demo1'))
                 else:
                     error = "Invalid username or password. Please try again."
                     return render_template('login.html', error=error)
@@ -143,7 +143,7 @@ def booking():
                 cur.close()
                 conn.close()
                 # Optionally, you can redirect to a success page
-                return redirect(url_for('index'))
+                return redirect(url_for('payment'))
             except psycopg2.Error as e:
                 print("Error while inserting booking data:", e)
                 conn.rollback()
@@ -158,9 +158,38 @@ def booking():
     # Redirect to the booking page if accessed directly via GET method
     return render_template('booking.html')
 
-@app.route('/booking_success')
-def booking_success():
-    return render_template('booking_success.html')
+@app.route('/payment', methods=['GET', 'POST'])
+def payment():
+    if request.method == 'POST':
+        card_number = request.form['cardNumber']
+        card_holder = request.form['cardHolder']
+        expiry_date = request.form['expiryDate']
+        cvv = request.form['cvv']
+
+        conn = connect_db()
+        if conn:
+            try:
+                cur = conn.cursor()
+                cur.execute("INSERT INTO payment (card_number, card_holder, expiry_date, cvv) VALUES (%s, %s, %s, %s)", 
+                            (card_number, card_holder, expiry_date, cvv))
+                conn.commit()
+                cur.close()
+                conn.close()
+                # Redirect to booking success page after payment
+                return redirect(url_for('demo1'))
+            except psycopg2.Error as e:
+                print("Error while inserting payment data:", e)
+                conn.rollback()
+                cur.close()
+                conn.close()
+                error = "An error occurred while processing the payment. Please try again."
+                return render_template('payment.html', error=error)
+        else:
+            error = "Database connection error. Please try again later."
+            return render_template('payment.html', error=error)
+
+    return render_template('payment.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
