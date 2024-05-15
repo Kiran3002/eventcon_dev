@@ -25,8 +25,8 @@ def connect_db():
         return None
 
 @app.route('/')
-def index():
-    return render_template('register.html')
+def demo1():
+    return render_template('demo1.html')
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -77,8 +77,8 @@ def login():
                 cur.close()
                 conn.close()
                 if result and check_password_hash(result[0], password):
-                    # If login is successful, redirect to contact page
-                    return redirect(url_for('contact'))
+                    # If login is successful, redirect to index page
+                    return redirect(url_for('index'))
                 else:
                     error = "Invalid username or password. Please try again."
                     return render_template('login.html', error=error)
@@ -124,6 +124,43 @@ def contact():
             return render_template('contact.html', error=error)
 
     return render_template('contact.html')
+
+@app.route('/booking', methods=['GET', 'POST'])
+def booking():
+    if request.method == 'POST':
+        name = request.form['name']
+        contact_number = request.form['contact_number']
+        no_of_tickets = request.form['no_of_tickets']
+        payment_method = request.form['payment_method']
+
+        conn = connect_db()
+        if conn:
+            try:
+                cur = conn.cursor()
+                cur.execute("INSERT INTO bookings (name, contact_number, no_of_tickets, payment_method) VALUES (%s, %s, %s, %s)", 
+                            (name, contact_number, no_of_tickets, payment_method))
+                conn.commit()
+                cur.close()
+                conn.close()
+                # Optionally, you can redirect to a success page
+                return redirect(url_for('index'))
+            except psycopg2.Error as e:
+                print("Error while inserting booking data:", e)
+                conn.rollback()
+                cur.close()
+                conn.close()
+                error = "An error occurred while booking tickets. Please try again."
+                return render_template('booking.html', error=error)
+        else:
+            error = "Database connection error. Please try again later."
+            return render_template('booking.html', error=error)
+
+    # Redirect to the booking page if accessed directly via GET method
+    return render_template('booking.html')
+
+@app.route('/booking_success')
+def booking_success():
+    return render_template('booking_success.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

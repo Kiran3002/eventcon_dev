@@ -57,7 +57,7 @@ body {
 }
 
 .login button[type="submit"]:hover {
-    background-color: #737373; /* Darker background color on hover */
+    background-color: #222; /* Darker background color on hover */
 }
 
 .login p {
