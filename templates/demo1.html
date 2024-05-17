@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventCon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='demo1.css') }}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+                <li><a href="/booking">Buy Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- EventCon Heading -->
+    <section class="eventcon-heading">
+        <h1>EventCon</h1>
+    </section>
+
+    <!-- Performer List -->
+    <section class="performer-list">
+        <div class="performer">
+            <img src="../static/singer1.jpg" alt="Performer 1">
+            <div class="performer-details">
+                <h2>Shreya Ghoshal</h2>
+                <p>Timing: 5:00 PM - 6:00 PM</p>
+                <p>Song Name:Chikni Chameli</p>
+            </div>
+        </div>
+        <!-- Repeat performer div for other performers -->
+        <div class="performer">
+            <img src="../static/singer2.jpg" alt="Performer 2">
+            <div class="performer-details">
+                <h2>Sonu Nigam</h2>
+                <p>Timing: 6:00 PM - 7:00 PM</p>
+                <p>Song Name: Anisuthide</p>
+            </div>
+        </div>
+        <div class="performer">
+            <img src="../static/singer3.jpg" alt="Performer 3">
+            <div class="performer-details">
+                <h2>Vijay Prakash</h2>
+                <p>Timing: 7:00 PM - 8:00 PM</p>
+                <p>Song Name: kavite kavite</p>
+            </div>
+        </div>
+        <div class="performer">
+            <img src="../static/singer4.jpg" alt="Performer 4">
+            <div class="performer-details">
+                <h2>Anuradha Bhat</h2>
+                <p>Timing: 8:00 PM - 9:00 PM</p>
+                <p>Song Name: melkote hudugi obalu</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Details -->
+    <section class="venue-details">
+        <h2>Venue Details</h2>
+        <p>Venue: Concert Hall</p>
+        <p>Address: 123 Church Street, Bengaluru</p>
+        <p>Contact: +91 1234567890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="footer-top">
+          <div class="container">
+    
+            <div class="footer-brand">
+    
+              <a href="#" class="logo">
+                <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Tourly logo">
+              </a>
+    
+              <p class="footer-text">
+                Uniting Souls through Music!
+
+              </p>
+    
+            </div>
+    
+            <div class="footer-contact">
+    
+              <h4 class="contact-title">Contact Us</h4>
+    
+              <p class="contact-text">
+                Feel free to contact and reach us !!
+              </p>
+    
+              <ul>
+    
+                <li class="contact-item">
+                  <ion-icon name="call-outline"></ion-icon>
+    
+                  <a href="tel:+01123456790" class="contact-link">+91 9829358827</a>
+                </li>
+    
+                <li class="contact-item">
+                  <ion-icon name="mail-outline"></ion-icon>
+    
+                  <a href="mailto:info.tourly.com" class="contact-link">info.EventCon.com</a>
+                </li>
+    
+                <li class="contact-item">
+                  <ion-icon name="location-outline"></ion-icon>
+    
+                  <address>no 116,MG Road,Bengaluru-560005</address>
+                </li>
+    
+              </ul>
+    
+            </div>
+    
+          </div>
+        </div>
+    
+        <div class="footer-bottom">
+          <div class="container">
+    
+            <p class="copyright">
+              &copy; 2024 <a href="">EventCon</a>. All rights reserved
+            </p>
+    
+            <ul class="footer-bottom-list">
+    
+              <li>
+                <a href="#" class="footer-bottom-link">Privacy Policy</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-bottom-link">Term & Condition</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-bottom-link">FAQ</a>
+              </li>
+    
+            </ul>
+    
+          </div>
+        </div>
+    
+      </footer>
+    
+</body>
+</html>

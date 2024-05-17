@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Form</title>
+</head>
+<body>
+
+<h2>Book Tickets</h2>
+
+<div class="div4">
+    <form action="/booking" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="contact_number">Contact Number:</label><br>
+        <input type="tel" id="contact_number" name="contact_number" pattern="[0-9]{10}" required><br><br>
+        
+        <label for="no_of_tickets">Number of Tickets:</label><br>
+        <input type="number" id="no_of_tickets" name="no_of_tickets" min="1" required><br><br>
+        
+        <label for="payment_method">Payment Method:</label><br>
+        <select id="payment_method" name="payment_method" required>
+            <option value="">Select Payment Method</option>
+            <option value="credit_card">Credit Card</option>
+            <option value="debit_card">Debit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank_transfer">Bank Transfer</option>
+        </select><br><br>
+        
+        <button type="submit">Book Tickets</button>
+    </form>
+</div>
+
+</body>
+</html>

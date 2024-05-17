@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>EventCon</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Light text color */
+            padding: 10px 20px; /* Add padding */
+            display: flex; /* Use flexbox for layout */
+            justify-content: space-between; /* Space out items */
+        }
+
+        /* Style the navigation bar */
+        .main-menu {
+            flex-grow: 1; /* Allow the navigation bar to grow */
+        }
+
+        /* Style the navigation links */
+        .main-menu ul {
+            list-style-type: none; /* Remove bullet points */
+            display: flex; /* Use flexbox for layout */
+        }
+
+        .main-menu ul li {
+            margin-right: 20px; /* Add margin between list items */
+        }
+
+        .main-menu ul li a {
+            color: #fff; /* Text color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Style the "Buy Tickets" button */
+        .login {
+            margin-left: auto;
+        }
+
+        .login a {
+            background-color: #ff6600; /* Orange background color */
+            color: #fff; /* Light text color */
+            padding: 10px 20px; /* Add padding */
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .login a:hover {
+            background-color: #ff8533; /* Darker orange on hover */
+        }
+
+        .footer {
+            background-color: #333; /* Dark background color */
+            color: #fff; /* Light text color */
+            padding: 20px; /* Add padding */
+            text-align: center; /* Center align text */
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header class="header white-theme">
+        <div class="main-menu">
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="/booking">Buy Tickets</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="login">
+            <a href="/login" class="login-button">Login</a>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- slider_area_start -->
+    <!-- Your slider code here -->
+    <!-- slider_area_end -->
+
+    <!-- performar_area_start  -->
+    <!-- Your performer area code here -->
+    <!-- performar_area_end  -->
+
+    <!-- about_area_start  -->
+    <!-- Your about area code here -->
+    <!-- about_area_end  -->
+
+    <!-- program_details_area_start  -->
+    <!-- Your program details area code here -->
+    <!-- program_details_area_end  -->
+
+    <!-- location_area_start  -->
+    <!-- Your location area code here -->
+    <!-- location_area_end  -->
+
+    <!-- footer_start  -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+        </div>
+    </footer>
+    <!-- footer_end  -->
+
+</body>
+
+</html>

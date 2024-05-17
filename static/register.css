@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('event_login.jpg'); /* Add your background image path here */
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.register h1 {
+    text-align: center;
+    color: #000; /* Black text color */
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+.register label {
+    margin-bottom: 5px;
+    color: #000; /* Black label color */
+}
+
+.register input[type="text"],
+.register input[type="email"],
+.register input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000; /* Black border */
+    border-radius: 5px;
+}
+
+.register input[type="text"]:focus,
+.register input[type="email"]:focus,
+.register input[type="password"]:focus {
+    outline: none;
+    border-color: #555; /* Dark gray border color on focus */
+}
+
+.register button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000; /* Black button background color */
+    color: #fff; /* White button text color */
+    cursor: pointer;
+}
+
+.register button[type="submit"]:hover {
+    background-color: #222; /* Darker background color on hover */
+}
+
+.register p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register p a {
+    color: #000; /* Black link color */
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}

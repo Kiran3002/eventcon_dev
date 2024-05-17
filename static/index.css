@@ -1,0 +1,195 @@
+/* Common styles */
+.header {
+    background-color: #333; /* Default background color for the header */
+    color: #fff; /* Default text color for the header */
+    padding: 20px 0;
+    display: flex; /* Make the header a flex container */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+/* Navbar styles */
+.main-menu ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Make the navbar items flex children */
+}
+
+.main-menu li {
+    margin-right: 20px; /* Add spacing between navbar items */
+}
+
+.main-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, transform 0.3s; /* Add smooth transition */
+}
+
+.main-menu a:hover {
+    background-color: #555; /* Hover background color */
+    transform: scale(1.05); /* Magnify effect on hover */
+}
+
+/* Login button */
+.login-button {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius */
+    padding: 10px 15px; /* Add padding */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.3s; /* Add smooth transition */
+    margin-right: 20px;
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Hover background color */
+    transform: scale(1.05); /* Magnify effect on hover */
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+
+/* Slider Styles */
+.slider_area {
+    background-color: #f7f7f7;
+    padding: 100px 0;
+}
+
+.slider_text {
+    color: #333;
+}
+
+.slider_text h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.slider_text p {
+    font-size: 18px;
+}
+
+/* Performer Styles */
+.performar_area {
+    padding: 100px 0;
+    background-image: url('singer1.jpg'); /* Replace 'path/to/background-image.jpg' with the actual path to your background image */
+    background-size: cover; /* Scale the background image to cover the entire element */
+    background-position: center; /* Center the background image */
+}
+
+.performer_heading {
+    background-image: url('path/to/performer-heading-background.jpg'); /* Replace 'path/to/performer-heading-background.jpg' with the actual path to your background image */
+    background-size: cover; /* Scale the background image to cover the entire element */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add padding to the performer heading */
+}
+
+.performer_heading h4 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #fff; /* Change text color to white */
+}
+
+.performer_heading span {
+    color: #777;
+}
+
+
+/* About Section Styles */
+.about {
+    padding: 100px 0;
+}
+
+.about h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #777;
+}
+
+/* Program Details Styles */
+.program_details_area {
+    padding: 100px 0;
+}
+
+.program_details_area h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.porgram_top {
+    margin-bottom: 50px;
+}
+
+.porgram_top span {
+    font-size: 20px;
+    color: #333;
+}
+
+.porgram_top h4 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Location Styles */
+.location {
+    background-color: #333;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.location h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.info_wrap {
+    margin-top: 50px;
+}
+
+.single_info {
+    margin-bottom: 20px;
+}
+
+.single_info span {
+    font-weight: bold;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f7f7f7;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 18px;
+    color: #777;
+}
+
+.copy_right {
+    margin-top: 50px;
+    font-size: 16px;
+    color: #777;
+}

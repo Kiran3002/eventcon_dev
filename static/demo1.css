@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+
+}
+
+.nav-list li a:hover {
+    background-color: #555; /* Change background color on hover */
+    color: #ff0; /* Change text color on hover */
+}
+
+/* EventCon Heading Styles */
+.eventcon-heading {
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.eventcon-heading h1 {
+    font-size: 36px;
+}
+
+/* Performer List Styles */
+.performer-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.performer {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.performer img {
+    width: 100%;
+    height: auto;
+}
+
+.performer-details {
+    margin-top: 20px;
+}
+
+/* Venue Details Styles */
+.venue-details {
+    text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #191616;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-top {
+    padding-bottom: 20px;
+}
+
+.footer-brand {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.footer-brand .logo {
+    display: inline-block;
+}
+
+.footer-brand img {
+    width: 120px; /* Adjust as needed */
+    height: auto;
+}
+
