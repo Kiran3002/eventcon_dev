@@ -9,14 +9,14 @@ body {
 .header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
 .nav-list {
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 10px;
 }
 
 .nav-list li {
@@ -28,12 +28,22 @@ body {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+
+}
+
+.nav-list li a:hover {
+    background-color: #555; /* Change background color on hover */
+    color: #ff0; /* Change text color on hover */
 }
 
 /* EventCon Heading Styles */
 .eventcon-heading {
     text-align: center;
     padding: 50px 0;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .eventcon-heading h1 {
@@ -72,7 +82,6 @@ body {
 }
 
 /* Footer Styles */
-/* Footer Styles */
 .footer {
     background-color: #191616;
     color: #fff;
@@ -97,76 +106,3 @@ body {
     height: auto;
 }
 
-.footer-text {
-    font-size: 24px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 10px;
-}
-
-.footer-contact {
-    text-align: center;
-}
-
-.contact-title {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.contact-text {
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.contact-item {
-    margin-bottom: 10px;
-    list-style: none;
-}
-
-.contact-item ion-icon {
-    margin-right: 5px;
-}
-
-.contact-link {
-    color: #fff;
-    text-decoration: none;
-}
-
-.contact-link:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    background-color: #222;
-    padding-top: 20px;
-}
-
-.footer-bottom .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.copyright {
-    font-size: 14px;
-    margin: 10;
-}
-
-.footer-bottom-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.footer-bottom-list li {
-    margin-right: 20px;
-}
-
-.footer-bottom-link {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-bottom-link:hover {
-    text-decoration: underline;
-}
