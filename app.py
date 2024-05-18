@@ -1,14 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 import psycopg2
-
+import os
 app = Flask(__name__)
 
 # PostgreSQL database configuration
-DB_HOST = 'localhost'
-DB_NAME = 'Kiran'
-DB_USER = 'Kiran'
+DB_HOST = 'host.docker.internal'
+DB_NAME = 'Event'
+DB_USER = 'postgres'
 DB_PASSWORD = 'goneMad@1900'
+DB_PORT='5433'
 
 # Connect to PostgreSQL database
 def connect_db():
@@ -17,7 +18,9 @@ def connect_db():
             host=DB_HOST,
             database=DB_NAME,
             user=DB_USER,
-            password=DB_PASSWORD
+            password=DB_PASSWORD,
+            port=DB_PORT
+           
         )
         return conn
     except psycopg2.Error as e:
@@ -110,8 +113,8 @@ def contact():
                 conn.commit()
                 cur.close()
                 conn.close()
-                # Optionally, you can redirect to a success page
-                #return render_template('query_success.html', name=name, email=email, subject=subject, message=message)
+                
+                return render_template('demo1')
             except psycopg2.Error as e:
                 print("Error while inserting query:", e)
                 conn.rollback()
@@ -192,4 +195,4 @@ def payment():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)

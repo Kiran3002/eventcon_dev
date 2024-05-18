@@ -1,7 +1,23 @@
-FROM nginx:latest
+# Use the official Python image from the Docker Hub
+FROM python:3.9-slim
 
-# Copy the website files into the container
-COPY . /usr/share/nginx/html
+# Set the working directory in the container
+WORKDIR /app
 
-# Expose port 80 to allow outside access
-EXPOSE 88
+# Copy the requirements file into the container
+COPY requirements.txt .
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the working directory contents into the container at /app
+COPY . .
+
+# Make port 5000 available to the world outside this container
+EXPOSE 5000
+
+# Define environment variable
+ENV FLASK_APP=app.py
+
+# Run the application
+CMD ["flask", "run", "--host=0.0.0.0"]
